@@ -2,7 +2,7 @@
 
 [![Python Version](https://img.shields.io/badge/python-3.10%20%7C%203.11-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://parvinder10-waterprint-streamlit-app-8div7e.streamlit.app/)
 [![Code Style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 > **WATERPRINT** is an enterprise-grade cyber-physical intelligence platform engineered to detect, quantify, and localise unexplained water losses (Non-Revenue Water, physical pipe bursts, incipient joint leaks, and faulty meters) across pressurized municipal drinking water distribution networks.
@@ -191,16 +191,9 @@ python -m src.pipeline
 
 ### 4. Deploy & Run Streamlit Dashboard
 
-#### A. Streamlit Community Cloud (1-Click Deployment)
-The repository is pre-configured for automated 1-click deployment on Streamlit Community Cloud:
-
-1. Click the direct deployment link:  
-   👉 **[Deploy on Streamlit Community Cloud](https://share.streamlit.io/deploy?repository=Parvinder10/waterprint&branch=main&mainModule=streamlit_app.py)**
-2. Confirm the pre-filled parameters:
-   * **Repository:** `Parvinder10/waterprint`
-   * **Branch:** `main`
-   * **Main file path:** `streamlit_app.py`
-3. Click **"Deploy!"** — Streamlit Cloud automatically installs dependencies from `requirements.txt` and launches the live cyber-physical analytics operations dashboard.
+#### A. Streamlit Community Cloud (Live Deployment)
+* **Live App URL:** 👉 **[https://parvinder10-waterprint-streamlit-app-8div7e.streamlit.app/](https://parvinder10-waterprint-streamlit-app-8div7e.streamlit.app/)**
+* **Deployment Dashboard:** [share.streamlit.io](https://share.streamlit.io/) (Repository: `Parvinder10/waterprint`, Branch: `main`, File: `streamlit_app.py`)
 
 #### B. Run Locally
 ```bash
