@@ -189,7 +189,20 @@ Executes ingestion, quality checks, feature engineering, water balance auditing,
 python -m src.pipeline
 ```
 
-### 4. Launch the Streamlit Dashboard Locally
+### 4. Deploy & Run Streamlit Dashboard
+
+#### A. Streamlit Community Cloud (1-Click Deployment)
+The repository is pre-configured for automated 1-click deployment on Streamlit Community Cloud:
+
+1. Click the direct deployment link:  
+   👉 **[Deploy on Streamlit Community Cloud](https://share.streamlit.io/deploy?repository=Parvinder10/waterprint&branch=main&mainModule=streamlit_app.py)**
+2. Confirm the pre-filled parameters:
+   * **Repository:** `Parvinder10/waterprint`
+   * **Branch:** `main`
+   * **Main file path:** `streamlit_app.py`
+3. Click **"Deploy!"** — Streamlit Cloud automatically installs dependencies from `requirements.txt` and launches the live cyber-physical analytics operations dashboard.
+
+#### B. Run Locally
 ```bash
 streamlit run streamlit_app.py
 ```
@@ -197,23 +210,7 @@ Open [http://localhost:8501](http://localhost:8501) in your browser.
 
 ---
 
-## 7. Deploying on Streamlit Community Cloud (1-Click)
-
-The platform is optimized for **Streamlit Community Cloud** (`share.streamlit.io`):
-
-1. Go to **[share.streamlit.io](https://share.streamlit.io)** and log in with your GitHub account (**Parvinder10**).
-2. Click **"New app"**.
-3. Select your repository: **`Parvinder10/waterprint`**.
-4. Set the parameters:
-   * **Branch:** `main`
-   * **Main file path:** `streamlit_app.py` (or `app/streamlit_app.py`)
-5. Click **"Deploy!"**.
-
-Streamlit Cloud will automatically install dependencies from `requirements.txt` and launch the live application with your custom Streamlit URL (e.g., `https://waterprint.streamlit.app`).
-
----
-
-## 8. Running Unit & Integration Tests
+## 7. Running Unit & Integration Tests
 
 Execute the automated test suite with pytest:
 ```bash
@@ -222,7 +219,7 @@ pytest tests/ -v
 
 ---
 
-## 9. Documentation Suite
+## 8. Documentation Suite
 
 Full technical specifications, mathematical derivations, and domain manuals are available in `docs/`:
 * [Problem Statement & Background](docs/PROBLEM_STATEMENT.md)
@@ -238,7 +235,7 @@ Full technical specifications, mathematical derivations, and domain manuals are 
 
 ---
 
-## 10. License
+## 9. License
 
 This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
 Benchmark telemetry derives from the BattLeDIM / L-Town competition licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/).
