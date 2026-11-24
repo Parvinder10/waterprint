@@ -2,7 +2,7 @@
 
 [![Python Version](https://img.shields.io/badge/python-3.10%20%7C%203.11-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Streamlit](https://img.shields.io/badge/UI-Streamlit-FF4B4B.svg)](https://streamlit.io/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/)
 [![Code Style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 > **WATERPRINT** is an enterprise-grade cyber-physical intelligence platform engineered to detect, quantify, and localise unexplained water losses (Non-Revenue Water, physical pipe bursts, incipient joint leaks, and faulty meters) across pressurized municipal drinking water distribution networks.
@@ -103,10 +103,12 @@ Evaluated on the **BattLeDIM / L-Town European Water Distribution Benchmark** (Z
 
 ```
 water/
+├── .streamlit/
+│   └── config.toml             # Streamlit Cloud production theme & server settings
 ├── app/
 │   ├── __init__.py
 │   ├── components.py           # Reusable Plotly visualization widgets
-│   └── streamlit_app.py        # Interactive 7-tab operations dashboard
+│   └── streamlit_app.py        # Interactive 6-tab operations dashboard
 ├── config/
 │   └── config.yaml             # Centralized pipeline configuration
 ├── data/
@@ -122,22 +124,27 @@ water/
 │   ├── STATISTICAL_METHODS.md
 │   ├── SYSTEM_ARCHITECTURE.md
 │   └── WATER_BALANCE_METHODOLOGY.md
-├── frontend/                   # Modern React + Vite frontend for Vercel deployment
-│   ├── src/                    # Components (FlowPressureChart, TopologyMap, AnomalyInspector, etc.)
-│   ├── dist/                   # Production-compiled assets
-│   ├── vercel.json             # Vercel SPA routing and cache headers
-│   └── package.json            # Node.js dependencies
 ├── notebooks/                  # Exploratory research notebooks
 ├── reports/
 │   ├── anomaly_events.csv      # Detailed audit registry of detected leak events
 │   ├── benchmark_comparison.csv# Comparative performance metrics vs baselines
 │   └── evaluation_summary.json # Machine-readable evaluation metrics
 ├── src/
-│   ├── api/                    # FastAPI REST API service for cloud hosting
 │   ├── ingestion/              # Data loading, benchmark synthesis, and validation
 │   ├── preprocessing/          # Multi-source time alignment and sensor health filters
 │   ├── features/               # Temporal, autoregressive lag, and hydraulic feature engineering
 │   ├── statistics/             # IWA water balance, MNF/NNF extraction, CUSUM change-point
+│   ├── models/                 # Quantile forecaster, residual analyzer, Isolation Forest, ensemble
+│   ├── localisation/           # NetworkX graph modeling and pressure sensitivity matrix
+│   ├── evaluation/             # Chronological validation, delay tracking, and baselines
+│   ├── pipeline.py             # Master end-to-end execution pipeline
+│   └── utils/                  # Structured logging, Pydantic configs, domain exceptions
+├── tests/
+│   └── test_waterprint.py      # Comprehensive unit and integration test suite
+├── DATA_SOURCES.md             # Dataset provenance, verified URLs, and licensing
+├── README.md                   # System documentation
+├── requirements.txt            # Python dependencies
+└── streamlit_app.py            # Root Streamlit Community Cloud entry point
 │   ├── models/                 # Quantile forecaster, residual analyzer, Isolation Forest, ensemble
 │   ├── localisation/           # NetworkX graph modeling and pressure sensitivity matrix
 │   ├── evaluation/             # Chronological validation, delay tracking, and baselines
@@ -182,38 +189,31 @@ Executes ingestion, quality checks, feature engineering, water balance auditing,
 python -m src.pipeline
 ```
 
-### 4. Launch the Frontend & Backend
-
-#### A. Modern React Frontend (Vercel Ready)
+### 4. Launch the Streamlit Dashboard Locally
 ```bash
-# Terminal 1: Launch FastAPI Analytics Backend
-python -m uvicorn src.api.server:app --port 8088 --reload
-
-# Terminal 2: Launch Vite React Dashboard
-cd frontend
-npm install
-npm run dev
-```
-Open [http://localhost:5173](http://localhost:5173) in your browser.
-
-#### B. Alternative Streamlit Operations Dashboard
-```bash
-streamlit run app/streamlit_app.py
+streamlit run streamlit_app.py
 ```
 Open [http://localhost:8501](http://localhost:8501) in your browser.
 
 ---
 
-## 7. Vercel Deployment & Backend Hosting
+## 7. Deploying on Streamlit Community Cloud (1-Click)
 
-See the comprehensive [docs/VERCEL_DEPLOYMENT_GUIDE.md](docs/VERCEL_DEPLOYMENT_GUIDE.md) for detailed step-by-step instructions:
-* **Vercel Settings:** Framework `Vite`, Root Directory `frontend`, Build Command `npm run build`, Output Directory `dist`.
-* **Environment Variable:** `VITE_API_BASE_URL` pointing to your hosted FastAPI backend (e.g. on Render/Railway).
-* **Backend Hosting:** Use the included `Dockerfile` or `Procfile` to deploy `src.api.server:app`.
+The platform is optimized for **Streamlit Community Cloud** (`share.streamlit.io`):
+
+1. Go to **[share.streamlit.io](https://share.streamlit.io)** and log in with your GitHub account (**Parvinder10**).
+2. Click **"New app"**.
+3. Select your repository: **`Parvinder10/waterprint`**.
+4. Set the parameters:
+   * **Branch:** `main`
+   * **Main file path:** `streamlit_app.py` (or `app/streamlit_app.py`)
+5. Click **"Deploy!"**.
+
+Streamlit Cloud will automatically install dependencies from `requirements.txt` and launch the live application with your custom Streamlit URL (e.g., `https://waterprint.streamlit.app`).
 
 ---
 
-## 7. Running Unit & Integration Tests
+## 8. Running Unit & Integration Tests
 
 Execute the automated test suite with pytest:
 ```bash
@@ -222,7 +222,7 @@ pytest tests/ -v
 
 ---
 
-## 8. Documentation Suite
+## 9. Documentation Suite
 
 Full technical specifications, mathematical derivations, and domain manuals are available in `docs/`:
 * [Problem Statement & Background](docs/PROBLEM_STATEMENT.md)
@@ -238,7 +238,7 @@ Full technical specifications, mathematical derivations, and domain manuals are 
 
 ---
 
-## 9. License
+## 10. License
 
 This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
 Benchmark telemetry derives from the BattLeDIM / L-Town competition licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/).

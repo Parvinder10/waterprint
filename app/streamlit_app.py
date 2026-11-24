@@ -221,14 +221,13 @@ st.divider()
 # ==========================================
 # MULTI-TAB DASHBOARD INTERFACE
 # ==========================================
-tab_overview, tab_trends, tab_balance, tab_anomalies, tab_sensors, tab_benchmark, tab_reports = st.tabs([
+tab_overview, tab_trends, tab_balance, tab_anomalies, tab_sensors, tab_benchmark = st.tabs([
     "🗺️ Network Overview & Map",
     "📈 Hydraulic Trends & Forecasting",
     "⚖️ IWA Water Balance & MNF",
     "🚨 Anomaly Timeline & Localisation",
     "🩺 Sensor Health & Telemetry",
-    "🏆 Benchmark & Evaluation",
-    "📄 Exportable Reports"
+    "🏆 Benchmark & Evaluation"
 ])
 
 # ----------------------------------------------------
@@ -294,6 +293,12 @@ with tab_balance:
         st.dataframe(pd.DataFrame(wb_table_data), use_container_width=True)
         
     with col_wb2:
+        st.download_button(
+            label="📥 Download Audit Summary (JSON)",
+            data=json.dumps(summary, indent=2).encode("utf-8"),
+            file_name="waterprint_audit_summary.json",
+            mime="application/json"
+        )
         st.markdown(f"""
         <div class="metric-card">
             <h4>Water Loss Performance Indicators</h4>
@@ -325,6 +330,12 @@ with tab_anomalies:
                 "primary_candidate_zone", "confidence_score"
             ]],
             use_container_width=True
+        )
+        st.download_button(
+            label="📥 Download Anomaly Events (CSV)",
+            data=df_events.to_csv(index=False).encode("utf-8"),
+            file_name="waterprint_anomaly_events.csv",
+            mime="text/csv"
         )
         
         st.markdown("### Incident Drilldown & Candidate Localisation Inspector")
@@ -410,6 +421,12 @@ with tab_benchmark:
     st.markdown("### Comparative Performance vs. Industry Baselines")
     if not df_bench.empty:
         st.dataframe(df_bench, use_container_width=True)
+        st.download_button(
+            label="📥 Download Benchmark Comparison (CSV)",
+            data=df_bench.to_csv(index=False).encode("utf-8"),
+            file_name="waterprint_benchmark_comparison.csv",
+            mime="text/csv"
+        )
     
     st.markdown("""
     **Key Takeaways:**
@@ -417,56 +434,3 @@ with tab_benchmark:
     2. **Rolling Mean Baseline:** Suffers from contamination during gradual incipient leaks, raising the threshold and failing to alert.
     3. **WATERPRINT Multi-Tier Ensemble:** Achieves 100% recall on true leaks while dramatically reducing false alarms via sequential CUSUM drift and multi-sensor pressure corroboration.
     """)
-
-# ----------------------------------------------------
-# TAB 7: EXPORTABLE REPORTS
-# ----------------------------------------------------
-with tab_reports:
-    st.subheader("Operational Audit Logs & Exportable Reports")
-    
-    col_rep1, col_rep2, col_rep3 = st.columns(3)
-    
-    with col_rep1:
-        st.markdown("#### Anomaly Events Table")
-        csv_events = df_events.to_csv(index=False).encode("utf-8")
-        st.download_button(
-            label="📥 Download Anomaly Events (CSV)",
-            data=csv_events,
-            file_name="waterprint_anomaly_events.csv",
-            mime="text/csv"
-        )
-        
-    with col_rep2:
-        st.markdown("#### Benchmark Metrics (JSON)")
-        json_summary = json.dumps(summary, indent=2).encode("utf-8")
-        st.download_button(
-            label="📥 Download Audit Summary (JSON)",
-            data=json_summary,
-            file_name="waterprint_audit_summary.json",
-            mime="application/json"
-        )
-        
-    with col_rep3:
-        st.markdown("#### Comparative Benchmark (CSV)")
-        csv_bench = df_bench.to_csv(index=False).encode("utf-8")
-        st.download_button(
-            label="📥 Download Benchmark Comparison (CSV)",
-            data=csv_bench,
-            file_name="waterprint_benchmark_comparison.csv",
-            mime="text/csv"
-        )
-        
-    st.divider()
-    st.markdown("### Executive Water Loss Audit Summary (Preview)")
-    audit_md = f"""
-# WATERPRINT Executive Water Loss Audit Report
-- **Target Network:** {topology.get('dma_id')} ({topology.get('name')})
-- **System Input Volume (SIV):** {wb.get('system_input_volume_m3', 0):,.1f} m³
-- **Billed Authorized Consumption:** {wb.get('billed_authorized_consumption_m3', 0):,.1f} m³
-- **Non-Revenue Water (NRW):** {wb.get('non_revenue_water_m3', 0):,.1f} m³ ({wb.get('non_revenue_water_pct', 0):.2f}%)
-- **Infrastructure Leakage Index (ILI):** {ili:.2f} ({rating})
-- **Active Leak Incidents Identified:** {len(df_events)}
-- **Detection Benchmark Recall:** {metrics.get('recall', 0)*100:.1f}%
-- **False Alarm Rate:** {metrics.get('false_alarms_per_month', 0):.2f} alarms / month
-    """
-    st.code(audit_md, language="markdown")
