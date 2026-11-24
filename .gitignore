@@ -34,3 +34,5 @@ Thumbs.db
 # Large raw caches / backups if any
 *.tmp
 backups/
+
+.vercel

@@ -3,7 +3,13 @@
 [![Python Version](https://img.shields.io/badge/python-3.10%20%7C%203.11-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://parvinder10-waterprint-streamlit-app-8div7e.streamlit.app/)
+[![Vercel Deployment](https://img.shields.io/badge/Vercel-Deployed-black?logo=vercel)](https://waterprint.vercel.app/)
 [![Code Style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+| Deployment Platform | Live Production URL | Dashboard Type |
+| :--- | :--- | :--- |
+| 🎈 **Streamlit Community Cloud** | [https://parvinder10-waterprint-streamlit-app-8div7e.streamlit.app](https://parvinder10-waterprint-streamlit-app-8div7e.streamlit.app/) | Cyber-Physical Analytics Dashboard |
+| ▲ **Vercel Production** | [https://waterprint.vercel.app](https://waterprint.vercel.app/) | Modern Web Telemetry UI |
 
 > **WATERPRINT** is an enterprise-grade cyber-physical intelligence platform engineered to detect, quantify, and localise unexplained water losses (Non-Revenue Water, physical pipe bursts, incipient joint leaks, and faulty meters) across pressurized municipal drinking water distribution networks.
 
@@ -189,13 +195,17 @@ Executes ingestion, quality checks, feature engineering, water balance auditing,
 python -m src.pipeline
 ```
 
-### 4. Deploy & Run Streamlit Dashboard
+### 4. Live Deployments & Local Execution
 
-#### A. Streamlit Community Cloud (Live Deployment)
-* **Live App URL:** 👉 **[https://parvinder10-waterprint-streamlit-app-8div7e.streamlit.app/](https://parvinder10-waterprint-streamlit-app-8div7e.streamlit.app/)**
-* **Deployment Dashboard:** [share.streamlit.io](https://share.streamlit.io/) (Repository: `Parvinder10/waterprint`, Branch: `main`, File: `streamlit_app.py`)
+#### A. Streamlit Community Cloud (Cyber-Physical Analytics Dashboard)
+* **Live Streamlit App:** 👉 **[https://parvinder10-waterprint-streamlit-app-8div7e.streamlit.app/](https://parvinder10-waterprint-streamlit-app-8div7e.streamlit.app/)**
+* **Deployment Dashboard:** [share.streamlit.io](https://share.streamlit.io/) (`Parvinder10/waterprint` • `streamlit_app.py`)
 
-#### B. Run Locally
+#### B. Vercel Production Deployment (Modern Web Telemetry UI)
+* **Live Vercel App:** 👉 **[https://waterprint.vercel.app/](https://waterprint.vercel.app/)**
+* **Project Dashboard:** [vercel.com/parvinder10s-projects/waterprint](https://vercel.com/parvinder10s-projects/waterprint)
+
+#### C. Run Locally
 ```bash
 streamlit run streamlit_app.py
 ```
