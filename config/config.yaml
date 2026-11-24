@@ -1,0 +1,72 @@
+# WATERPRINT Configuration File
+# Intelligent Water Loss Detection and Network Analytics
+
+project:
+  name: "WATERPRINT"
+  version: "1.0.0"
+  description: "Intelligent Water Loss Detection and Network Analytics Platform"
+  author: "Senior Data Scientist & ML Engineer"
+
+data:
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+  network_file: "data/raw/network_topology.json"
+  flow_data_file: "data/raw/dma_flow_records.csv"
+  pressure_data_file: "data/raw/pressure_sensor_records.csv"
+  consumption_data_file: "data/raw/smart_meter_consumption.csv"
+  leak_ground_truth_file: "data/raw/leak_ground_truth.csv"
+  sample_frequency: "15min"
+  target_dma: "DMA_NORTH"
+
+sensor_quality:
+  flow_min_valid: 0.0          # m3/h
+  flow_max_valid: 500.0        # m3/h
+  pressure_min_valid: 5.0      # meters of head (or bar: 0.5 - 10.0 bar)
+  pressure_max_valid: 90.0     # meters of head
+  max_flatline_consecutive: 4  # consecutive identical readings flag sensor freeze
+  max_flow_rate_of_change: 120.0 # m3/h per step
+  max_pressure_rate_of_change: 25.0 # meters head per step
+  missing_interpolation_limit: 4 # max periods to forward/linear interpolate
+
+features:
+  rolling_windows: [4, 12, 24, 96] # 1h, 3h, 6h, 24h at 15-min intervals
+  mnf_start_hour: 2            # Minimum Night Flow start (02:00)
+  mnf_end_hour: 4              # Minimum Night Flow end (04:00)
+  include_lag_features: true
+  lag_steps: [1, 2, 4, 96, 672] # 15m, 30m, 1h, 24h, 1 week (672 steps)
+
+models:
+  baseline_forecaster:
+    algorithm: "gradient_boosting" # options: "gradient_boosting", "ridge_fourier"
+    n_estimators: 120
+    max_depth: 5
+    learning_rate: 0.08
+    prediction_interval_alpha: 0.05 # 95% confidence bounds
+    random_state: 42
+  
+  statistical_detector:
+    z_score_threshold: 2.75
+    rolling_window: 96          # 24h window
+    cusum_threshold: 4.5
+    cusum_drift: 0.5
+    persistence_steps: 3        # Require consecutive alarms to prevent transient false alarms
+
+  isolation_forest:
+    n_estimators: 150
+    contamination: 0.035
+    max_samples: 0.8
+    random_state: 42
+
+  bayesian_uncertainty:
+    prior_std: 1.0
+    credible_interval: 0.95
+    mcmc_samples: 500
+
+localisation:
+  top_k_candidates: 3
+  hydraulic_resistance_decay: 0.15
+  min_pressure_drop_sensitivity: 0.5
+
+evaluation:
+  train_split_ratio: 0.70
+  detection_window_hours: 24

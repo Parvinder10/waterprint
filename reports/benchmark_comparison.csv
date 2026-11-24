@@ -1,0 +1,5 @@
+Method,Precision,Recall,F1_Score,Mean_Delay_Hours,False_Alarms_Per_Month,Localisation_Support
+Fixed Static Threshold,0.046,1.0,0.088,5.3,57.23,None
+Rolling Mean + 2.5σ,0.0,0.0,0.0,0.0,0.56,None
+Standalone Isolation Forest,0.05,1.0,0.094,5.5,53.34,None
+WATERPRINT Multi-Tier Ensemble,0.417,1.0,0.588,7.95,3.89,Hydraulic Pressure Matrix & Graph Ranking

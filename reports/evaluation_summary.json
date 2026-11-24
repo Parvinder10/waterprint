@@ -1,0 +1,78 @@
+{
+  "evaluation_metrics": {
+    "test_duration_days": 54.0,
+    "test_duration_months": 1.8,
+    "total_ground_truth_leaks": 5,
+    "true_positive_leaks_detected": 5,
+    "false_negative_missed_leaks": 0,
+    "false_positive_alarms": 7,
+    "precision": 0.417,
+    "recall": 1.0,
+    "f1_score": 0.588,
+    "mean_detection_delay_hours": 7.95,
+    "false_alarms_per_month": 3.89,
+    "localisation_top1_accuracy_pct": 0.0,
+    "localisation_top3_accuracy_pct": 0.0
+  },
+  "water_balance_audit": {
+    "evaluation_days": 180.0,
+    "system_input_volume_m3": 392009.8,
+    "billed_authorized_consumption_m3": 370291.8,
+    "unbilled_authorized_consumption_m3": 9800.2,
+    "total_authorized_m3": 380092.1,
+    "non_revenue_water_m3": 21718.0,
+    "non_revenue_water_pct": 5.54,
+    "apparent_losses_m3": 14920.3,
+    "real_physical_losses_m3": 0.0,
+    "uarl_period_m3": 29304.7,
+    "infrastructure_leakage_index_ili": 0.0,
+    "ili_rating": "Category A (World Class)"
+  },
+  "sensor_quality_summary": {
+    "total_timesteps": 17280,
+    "flow_sensors_monitored": 1,
+    "pressure_sensors_monitored": 8,
+    "total_sensor_fault_events": 2,
+    "data_completeness_pct": 100.0,
+    "hardware_health_status": "EXCELLENT"
+  },
+  "total_events_detected": 12,
+  "benchmark_comparison": [
+    {
+      "Method": "Fixed Static Threshold",
+      "Precision": 0.046,
+      "Recall": 1.0,
+      "F1_Score": 0.088,
+      "Mean_Delay_Hours": 5.3,
+      "False_Alarms_Per_Month": 57.23,
+      "Localisation_Support": "None"
+    },
+    {
+      "Method": "Rolling Mean + 2.5\u03c3",
+      "Precision": 0.0,
+      "Recall": 0.0,
+      "F1_Score": 0.0,
+      "Mean_Delay_Hours": 0.0,
+      "False_Alarms_Per_Month": 0.56,
+      "Localisation_Support": "None"
+    },
+    {
+      "Method": "Standalone Isolation Forest",
+      "Precision": 0.05,
+      "Recall": 1.0,
+      "F1_Score": 0.094,
+      "Mean_Delay_Hours": 5.5,
+      "False_Alarms_Per_Month": 53.34,
+      "Localisation_Support": "None"
+    },
+    {
+      "Method": "WATERPRINT Multi-Tier Ensemble",
+      "Precision": 0.417,
+      "Recall": 1.0,
+      "F1_Score": 0.588,
+      "Mean_Delay_Hours": 7.95,
+      "False_Alarms_Per_Month": 3.89,
+      "Localisation_Support": "Hydraulic Pressure Matrix & Graph Ranking"
+    }
+  ]
+}

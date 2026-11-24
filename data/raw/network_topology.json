@@ -1,0 +1,906 @@
+{
+  "dma_id": "DMA_NORTH",
+  "name": "L-Town North District Metered Area",
+  "nodes": [
+    {
+      "node_id": "RES_1",
+      "elevation": 75.0,
+      "base_demand": 0.0,
+      "coordinates": {
+        "x": 541500.0,
+        "y": 4120500.0
+      },
+      "zone": "SOURCE",
+      "has_pressure_sensor": true,
+      "sensor_id": "p_res1"
+    },
+    {
+      "node_id": "n1",
+      "elevation": 45.8,
+      "base_demand": 2.3,
+      "coordinates": {
+        "x": 542042.1,
+        "y": 4120021.6
+      },
+      "zone": "ZONE_NORTH_WEST",
+      "has_pressure_sensor": true,
+      "sensor_id": "p_n1"
+    },
+    {
+      "node_id": "n2",
+      "elevation": 50.8,
+      "base_demand": 3.1,
+      "coordinates": {
+        "x": 542495.5,
+        "y": 4119983.4
+      },
+      "zone": "ZONE_NORTH_WEST",
+      "has_pressure_sensor": false,
+      "sensor_id": null
+    },
+    {
+      "node_id": "n3",
+      "elevation": 54.0,
+      "base_demand": 3.9,
+      "coordinates": {
+        "x": 542907.1,
+        "y": 4119960.4
+      },
+      "zone": "ZONE_NORTH_WEST",
+      "has_pressure_sensor": false,
+      "sensor_id": null
+    },
+    {
+      "node_id": "n4",
+      "elevation": 55.0,
+      "base_demand": 4.7,
+      "coordinates": {
+        "x": 543312.2,
+        "y": 4119973.9
+      },
+      "zone": "ZONE_NORTH_WEST",
+      "has_pressure_sensor": false,
+      "sensor_id": null
+    },
+    {
+      "node_id": "n5",
+      "elevation": 53.6,
+      "base_demand": 1.5,
+      "coordinates": {
+        "x": 543752.1,
+        "y": 4120011.3
+      },
+      "zone": "ZONE_NORTH_EAST",
+      "has_pressure_sensor": true,
+      "sensor_id": "p_n5"
+    },
+    {
+      "node_id": "n6",
+      "elevation": 50.1,
+      "base_demand": 2.3,
+      "coordinates": {
+        "x": 544236.0,
+        "y": 4120038.4
+      },
+      "zone": "ZONE_NORTH_EAST",
+      "has_pressure_sensor": false,
+      "sensor_id": null
+    },
+    {
+      "node_id": "n7",
+      "elevation": 45.0,
+      "base_demand": 3.1,
+      "coordinates": {
+        "x": 544732.8,
+        "y": 4120030.2
+      },
+      "zone": "ZONE_NORTH_EAST",
+      "has_pressure_sensor": false,
+      "sensor_id": null
+    },
+    {
+      "node_id": "n8",
+      "elevation": 39.1,
+      "base_demand": 3.9,
+      "coordinates": {
+        "x": 545199.5,
+        "y": 4119994.2
+      },
+      "zone": "ZONE_NORTH_EAST",
+      "has_pressure_sensor": false,
+      "sensor_id": null
+    },
+    {
+      "node_id": "n9",
+      "elevation": 38.4,
+      "base_demand": 4.7,
+      "coordinates": {
+        "x": 542020.6,
+        "y": 4120363.6
+      },
+      "zone": "ZONE_NORTH_WEST",
+      "has_pressure_sensor": true,
+      "sensor_id": "p_n9"
+    },
+    {
+      "node_id": "n10",
+      "elevation": 33.6,
+      "base_demand": 1.5,
+      "coordinates": {
+        "x": 542422.8,
+        "y": 4120366.4
+      },
+      "zone": "ZONE_NORTH_WEST",
+      "has_pressure_sensor": false,
+      "sensor_id": null
+    },
+    {
+      "node_id": "n11",
+      "elevation": 30.7,
+      "base_demand": 2.3,
+      "coordinates": {
+        "x": 542850.0,
+        "y": 4120400.2
+      },
+      "zone": "ZONE_NORTH_WEST",
+      "has_pressure_sensor": false,
+      "sensor_id": null
+    },
+    {
+      "node_id": "n12",
+      "elevation": 30.1,
+      "base_demand": 3.1,
+      "coordinates": {
+        "x": 543323.2,
+        "y": 4120433.8
+      },
+      "zone": "ZONE_NORTH_WEST",
+      "has_pressure_sensor": false,
+      "sensor_id": null
+    },
+    {
+      "node_id": "n13",
+      "elevation": 31.7,
+      "base_demand": 3.9,
+      "coordinates": {
+        "x": 543821.0,
+        "y": 4120436.3
+      },
+      "zone": "ZONE_NORTH_EAST",
+      "has_pressure_sensor": false,
+      "sensor_id": null
+    },
+    {
+      "node_id": "n14",
+      "elevation": 35.5,
+      "base_demand": 4.7,
+      "coordinates": {
+        "x": 544299.5,
+        "y": 4120405.5
+      },
+      "zone": "ZONE_NORTH_EAST",
+      "has_pressure_sensor": true,
+      "sensor_id": "p_n14"
+    },
+    {
+      "node_id": "n15",
+      "elevation": 40.8,
+      "base_demand": 1.5,
+      "coordinates": {
+        "x": 544732.5,
+        "y": 4120369.6
+      },
+      "zone": "ZONE_NORTH_EAST",
+      "has_pressure_sensor": false,
+      "sensor_id": null
+    },
+    {
+      "node_id": "n16",
+      "elevation": 46.7,
+      "base_demand": 2.3,
+      "coordinates": {
+        "x": 545135.6,
+        "y": 4120361.7
+      },
+      "zone": "ZONE_NORTH_EAST",
+      "has_pressure_sensor": false,
+      "sensor_id": null
+    },
+    {
+      "node_id": "n17",
+      "elevation": 57.4,
+      "base_demand": 3.1,
+      "coordinates": {
+        "x": 541951.9,
+        "y": 4120789.0
+      },
+      "zone": "ZONE_COMMERCIAL",
+      "has_pressure_sensor": false,
+      "sensor_id": null
+    },
+    {
+      "node_id": "n18",
+      "elevation": 61.9,
+      "base_demand": 3.9,
+      "coordinates": {
+        "x": 542412.5,
+        "y": 4120826.4
+      },
+      "zone": "ZONE_COMMERCIAL",
+      "has_pressure_sensor": true,
+      "sensor_id": "p_n18"
+    },
+    {
+      "node_id": "n19",
+      "elevation": 64.5,
+      "base_demand": 4.7,
+      "coordinates": {
+        "x": 542907.5,
+        "y": 4120839.5
+      },
+      "zone": "ZONE_COMMERCIAL",
+      "has_pressure_sensor": false,
+      "sensor_id": null
+    },
+    {
+      "node_id": "n20",
+      "elevation": 64.8,
+      "base_demand": 1.5,
+      "coordinates": {
+        "x": 543395.6,
+        "y": 4120816.3
+      },
+      "zone": "ZONE_COMMERCIAL",
+      "has_pressure_sensor": false,
+      "sensor_id": null
+    },
+    {
+      "node_id": "n21",
+      "elevation": 62.8,
+      "base_demand": 2.3,
+      "coordinates": {
+        "x": 543841.8,
+        "y": 4120778.1
+      },
+      "zone": "ZONE_CENTRAL",
+      "has_pressure_sensor": false,
+      "sensor_id": null
+    },
+    {
+      "node_id": "n22",
+      "elevation": 58.8,
+      "base_demand": 3.1,
+      "coordinates": {
+        "x": 544249.6,
+        "y": 4120760.0
+      },
+      "zone": "ZONE_CENTRAL",
+      "has_pressure_sensor": true,
+      "sensor_id": "p_n22"
+    },
+    {
+      "node_id": "n23",
+      "elevation": 53.3,
+      "base_demand": 3.9,
+      "coordinates": {
+        "x": 544657.7,
+        "y": 4120778.7
+      },
+      "zone": "ZONE_CENTRAL",
+      "has_pressure_sensor": false,
+      "sensor_id": null
+    },
+    {
+      "node_id": "n24",
+      "elevation": 47.4,
+      "base_demand": 4.7,
+      "coordinates": {
+        "x": 545104.7,
+        "y": 4120817.0
+      },
+      "zone": "ZONE_CENTRAL",
+      "has_pressure_sensor": false,
+      "sensor_id": null
+    },
+    {
+      "node_id": "n25",
+      "elevation": 46.8,
+      "base_demand": 1.5,
+      "coordinates": {
+        "x": 541993.4,
+        "y": 4121239.6
+      },
+      "zone": "ZONE_COMMERCIAL",
+      "has_pressure_sensor": false,
+      "sensor_id": null
+    },
+    {
+      "node_id": "n26",
+      "elevation": 42.6,
+      "base_demand": 2.3,
+      "coordinates": {
+        "x": 542488.1,
+        "y": 4121225.9
+      },
+      "zone": "ZONE_COMMERCIAL",
+      "has_pressure_sensor": false,
+      "sensor_id": null
+    },
+    {
+      "node_id": "n27",
+      "elevation": 40.3,
+      "base_demand": 3.1,
+      "coordinates": {
+        "x": 542947.8,
+        "y": 4121188.3
+      },
+      "zone": "ZONE_COMMERCIAL",
+      "has_pressure_sensor": true,
+      "sensor_id": "p_n27"
+    },
+    {
+      "node_id": "n28",
+      "elevation": 40.3,
+      "base_demand": 3.9,
+      "coordinates": {
+        "x": 543363.5,
+        "y": 4121161.5
+      },
+      "zone": "ZONE_COMMERCIAL",
+      "has_pressure_sensor": false,
+      "sensor_id": null
+    },
+    {
+      "node_id": "n29",
+      "elevation": 42.7,
+      "base_demand": 4.7,
+      "coordinates": {
+        "x": 543766.8,
+        "y": 4121170.1
+      },
+      "zone": "ZONE_CENTRAL",
+      "has_pressure_sensor": false,
+      "sensor_id": null
+    },
+    {
+      "node_id": "n30",
+      "elevation": 47.0,
+      "base_demand": 1.5,
+      "coordinates": {
+        "x": 544200.6,
+        "y": 4121206.2
+      },
+      "zone": "ZONE_CENTRAL",
+      "has_pressure_sensor": false,
+      "sensor_id": null
+    },
+    {
+      "node_id": "n31",
+      "elevation": 52.5,
+      "base_demand": 2.3,
+      "coordinates": {
+        "x": 544679.8,
+        "y": 4121236.6
+      },
+      "zone": "ZONE_CENTRAL",
+      "has_pressure_sensor": true,
+      "sensor_id": "p_n31"
+    },
+    {
+      "node_id": "n32",
+      "elevation": 58.5,
+      "base_demand": 3.1,
+      "coordinates": {
+        "x": 545177.6,
+        "y": 4121233.4
+      },
+      "zone": "ZONE_CENTRAL",
+      "has_pressure_sensor": false,
+      "sensor_id": null
+    }
+  ],
+  "pipes": [
+    {
+      "pipe_id": "p100",
+      "start_node": "RES_1",
+      "end_node": "n1",
+      "length": 600.0,
+      "diameter": 300.0,
+      "roughness": 120.0,
+      "material": "Ductile_Iron"
+    },
+    {
+      "pipe_id": "p101",
+      "start_node": "n1",
+      "end_node": "n2",
+      "length": 433.6,
+      "diameter": 200.0,
+      "roughness": 115.0,
+      "material": "Ductile_Iron"
+    },
+    {
+      "pipe_id": "p102",
+      "start_node": "n2",
+      "end_node": "n3",
+      "length": 449.8,
+      "diameter": 200.0,
+      "roughness": 115.0,
+      "material": "Ductile_Iron"
+    },
+    {
+      "pipe_id": "p103",
+      "start_node": "n3",
+      "end_node": "n4",
+      "length": 438.7,
+      "diameter": 200.0,
+      "roughness": 115.0,
+      "material": "Ductile_Iron"
+    },
+    {
+      "pipe_id": "p104",
+      "start_node": "n4",
+      "end_node": "n5",
+      "length": 410.4,
+      "diameter": 200.0,
+      "roughness": 115.0,
+      "material": "Ductile_Iron"
+    },
+    {
+      "pipe_id": "p105",
+      "start_node": "n5",
+      "end_node": "n6",
+      "length": 390.9,
+      "diameter": 200.0,
+      "roughness": 115.0,
+      "material": "Ductile_Iron"
+    },
+    {
+      "pipe_id": "p106",
+      "start_node": "n6",
+      "end_node": "n7",
+      "length": 398.2,
+      "diameter": 200.0,
+      "roughness": 115.0,
+      "material": "Ductile_Iron"
+    },
+    {
+      "pipe_id": "p107",
+      "start_node": "n7",
+      "end_node": "n8",
+      "length": 425.5,
+      "diameter": 200.0,
+      "roughness": 115.0,
+      "material": "Ductile_Iron"
+    },
+    {
+      "pipe_id": "p108",
+      "start_node": "n9",
+      "end_node": "n10",
+      "length": 447.8,
+      "diameter": 150.0,
+      "roughness": 115.0,
+      "material": "Ductile_Iron"
+    },
+    {
+      "pipe_id": "p109",
+      "start_node": "n10",
+      "end_node": "n11",
+      "length": 444.5,
+      "diameter": 150.0,
+      "roughness": 115.0,
+      "material": "Ductile_Iron"
+    },
+    {
+      "pipe_id": "p110",
+      "start_node": "n11",
+      "end_node": "n12",
+      "length": 418.7,
+      "diameter": 150.0,
+      "roughness": 115.0,
+      "material": "Ductile_Iron"
+    },
+    {
+      "pipe_id": "p111",
+      "start_node": "n12",
+      "end_node": "n13",
+      "length": 394.1,
+      "diameter": 150.0,
+      "roughness": 115.0,
+      "material": "Ductile_Iron"
+    },
+    {
+      "pipe_id": "p112",
+      "start_node": "n13",
+      "end_node": "n14",
+      "length": 393.3,
+      "diameter": 150.0,
+      "roughness": 115.0,
+      "material": "Ductile_Iron"
+    },
+    {
+      "pipe_id": "p113",
+      "start_node": "n14",
+      "end_node": "n15",
+      "length": 417.1,
+      "diameter": 150.0,
+      "roughness": 115.0,
+      "material": "Ductile_Iron"
+    },
+    {
+      "pipe_id": "p114",
+      "start_node": "n15",
+      "end_node": "n16",
+      "length": 443.5,
+      "diameter": 150.0,
+      "roughness": 115.0,
+      "material": "Ductile_Iron"
+    },
+    {
+      "pipe_id": "p115",
+      "start_node": "n17",
+      "end_node": "n18",
+      "length": 448.4,
+      "diameter": 150.0,
+      "roughness": 115.0,
+      "material": "PVC"
+    },
+    {
+      "pipe_id": "p116",
+      "start_node": "n18",
+      "end_node": "n19",
+      "length": 427.1,
+      "diameter": 150.0,
+      "roughness": 115.0,
+      "material": "PVC"
+    },
+    {
+      "pipe_id": "p117",
+      "start_node": "n19",
+      "end_node": "n20",
+      "length": 399.3,
+      "diameter": 150.0,
+      "roughness": 115.0,
+      "material": "PVC"
+    },
+    {
+      "pipe_id": "p118",
+      "start_node": "n20",
+      "end_node": "n21",
+      "length": 390.5,
+      "diameter": 150.0,
+      "roughness": 115.0,
+      "material": "PVC"
+    },
+    {
+      "pipe_id": "p119",
+      "start_node": "n21",
+      "end_node": "n22",
+      "length": 408.9,
+      "diameter": 150.0,
+      "roughness": 115.0,
+      "material": "PVC"
+    },
+    {
+      "pipe_id": "p120",
+      "start_node": "n22",
+      "end_node": "n23",
+      "length": 437.4,
+      "diameter": 150.0,
+      "roughness": 115.0,
+      "material": "PVC"
+    },
+    {
+      "pipe_id": "p121",
+      "start_node": "n23",
+      "end_node": "n24",
+      "length": 450.0,
+      "diameter": 150.0,
+      "roughness": 115.0,
+      "material": "PVC"
+    },
+    {
+      "pipe_id": "p122",
+      "start_node": "n25",
+      "end_node": "n26",
+      "length": 435.0,
+      "diameter": 200.0,
+      "roughness": 115.0,
+      "material": "PVC"
+    },
+    {
+      "pipe_id": "p123",
+      "start_node": "n26",
+      "end_node": "n27",
+      "length": 406.2,
+      "diameter": 200.0,
+      "roughness": 115.0,
+      "material": "PVC"
+    },
+    {
+      "pipe_id": "p124",
+      "start_node": "n27",
+      "end_node": "n28",
+      "length": 390.1,
+      "diameter": 200.0,
+      "roughness": 115.0,
+      "material": "PVC"
+    },
+    {
+      "pipe_id": "p125",
+      "start_node": "n28",
+      "end_node": "n29",
+      "length": 401.5,
+      "diameter": 200.0,
+      "roughness": 115.0,
+      "material": "PVC"
+    },
+    {
+      "pipe_id": "p126",
+      "start_node": "n29",
+      "end_node": "n30",
+      "length": 429.9,
+      "diameter": 200.0,
+      "roughness": 115.0,
+      "material": "PVC"
+    },
+    {
+      "pipe_id": "p127",
+      "start_node": "n30",
+      "end_node": "n31",
+      "length": 449.2,
+      "diameter": 200.0,
+      "roughness": 115.0,
+      "material": "PVC"
+    },
+    {
+      "pipe_id": "p128",
+      "start_node": "n31",
+      "end_node": "n32",
+      "length": 441.6,
+      "diameter": 200.0,
+      "roughness": 115.0,
+      "material": "PVC"
+    },
+    {
+      "pipe_id": "p129",
+      "start_node": "n1",
+      "end_node": "n9",
+      "length": 355.5,
+      "diameter": 150.0,
+      "roughness": 110.0,
+      "material": "MDPE"
+    },
+    {
+      "pipe_id": "p130",
+      "start_node": "n2",
+      "end_node": "n10",
+      "length": 370.8,
+      "diameter": 100.0,
+      "roughness": 110.0,
+      "material": "MDPE"
+    },
+    {
+      "pipe_id": "p131",
+      "start_node": "n3",
+      "end_node": "n11",
+      "length": 394.6,
+      "diameter": 100.0,
+      "roughness": 110.0,
+      "material": "MDPE"
+    },
+    {
+      "pipe_id": "p132",
+      "start_node": "n4",
+      "end_node": "n12",
+      "length": 405.0,
+      "diameter": 100.0,
+      "roughness": 110.0,
+      "material": "MDPE"
+    },
+    {
+      "pipe_id": "p133",
+      "start_node": "n5",
+      "end_node": "n13",
+      "length": 392.4,
+      "diameter": 100.0,
+      "roughness": 110.0,
+      "material": "MDPE"
+    },
+    {
+      "pipe_id": "p134",
+      "start_node": "n6",
+      "end_node": "n14",
+      "length": 368.4,
+      "diameter": 100.0,
+      "roughness": 110.0,
+      "material": "MDPE"
+    },
+    {
+      "pipe_id": "p135",
+      "start_node": "n7",
+      "end_node": "n15",
+      "length": 355.1,
+      "diameter": 100.0,
+      "roughness": 110.0,
+      "material": "MDPE"
+    },
+    {
+      "pipe_id": "p136",
+      "start_node": "n8",
+      "end_node": "n16",
+      "length": 364.7,
+      "diameter": 150.0,
+      "roughness": 110.0,
+      "material": "MDPE"
+    },
+    {
+      "pipe_id": "p137",
+      "start_node": "n9",
+      "end_node": "n17",
+      "length": 388.4,
+      "diameter": 150.0,
+      "roughness": 110.0,
+      "material": "MDPE"
+    },
+    {
+      "pipe_id": "p138",
+      "start_node": "n10",
+      "end_node": "n18",
+      "length": 404.3,
+      "diameter": 100.0,
+      "roughness": 110.0,
+      "material": "MDPE"
+    },
+    {
+      "pipe_id": "p139",
+      "start_node": "n11",
+      "end_node": "n19",
+      "length": 397.9,
+      "diameter": 100.0,
+      "roughness": 110.0,
+      "material": "MDPE"
+    },
+    {
+      "pipe_id": "p140",
+      "start_node": "n12",
+      "end_node": "n20",
+      "length": 375.1,
+      "diameter": 100.0,
+      "roughness": 110.0,
+      "material": "MDPE"
+    },
+    {
+      "pipe_id": "p141",
+      "start_node": "n13",
+      "end_node": "n21",
+      "length": 356.7,
+      "diameter": 100.0,
+      "roughness": 110.0,
+      "material": "MDPE"
+    },
+    {
+      "pipe_id": "p142",
+      "start_node": "n14",
+      "end_node": "n22",
+      "length": 359.8,
+      "diameter": 100.0,
+      "roughness": 110.0,
+      "material": "MDPE"
+    },
+    {
+      "pipe_id": "p143",
+      "start_node": "n15",
+      "end_node": "n23",
+      "length": 381.4,
+      "diameter": 100.0,
+      "roughness": 110.0,
+      "material": "MDPE"
+    },
+    {
+      "pipe_id": "p144",
+      "start_node": "n16",
+      "end_node": "n24",
+      "length": 401.8,
+      "diameter": 150.0,
+      "roughness": 110.0,
+      "material": "MDPE"
+    },
+    {
+      "pipe_id": "p145",
+      "start_node": "n17",
+      "end_node": "n25",
+      "length": 402.1,
+      "diameter": 150.0,
+      "roughness": 110.0,
+      "material": "MDPE"
+    },
+    {
+      "pipe_id": "p146",
+      "start_node": "n18",
+      "end_node": "n26",
+      "length": 382.1,
+      "diameter": 100.0,
+      "roughness": 110.0,
+      "material": "MDPE"
+    },
+    {
+      "pipe_id": "p147",
+      "start_node": "n19",
+      "end_node": "n27",
+      "length": 360.2,
+      "diameter": 100.0,
+      "roughness": 110.0,
+      "material": "MDPE"
+    },
+    {
+      "pipe_id": "p148",
+      "start_node": "n20",
+      "end_node": "n28",
+      "length": 356.5,
+      "diameter": 100.0,
+      "roughness": 110.0,
+      "material": "MDPE"
+    },
+    {
+      "pipe_id": "p149",
+      "start_node": "n21",
+      "end_node": "n29",
+      "length": 374.4,
+      "diameter": 100.0,
+      "roughness": 110.0,
+      "material": "MDPE"
+    },
+    {
+      "pipe_id": "p150",
+      "start_node": "n22",
+      "end_node": "n30",
+      "length": 397.5,
+      "diameter": 100.0,
+      "roughness": 110.0,
+      "material": "MDPE"
+    },
+    {
+      "pipe_id": "p151",
+      "start_node": "n23",
+      "end_node": "n31",
+      "length": 404.5,
+      "diameter": 100.0,
+      "roughness": 110.0,
+      "material": "MDPE"
+    },
+    {
+      "pipe_id": "p152",
+      "start_node": "n24",
+      "end_node": "n32",
+      "length": 389.0,
+      "diameter": 150.0,
+      "roughness": 110.0,
+      "material": "MDPE"
+    }
+  ],
+  "pumps": [
+    {
+      "pump_id": "PUMP_1",
+      "inlet_node": "RES_1",
+      "outlet_node": "n1",
+      "power_kw": 55.0,
+      "status": "RUNNING"
+    }
+  ],
+  "sensor_nodes": [
+    "n1",
+    "n14",
+    "n18",
+    "n22",
+    "n27",
+    "n31",
+    "n5",
+    "n9"
+  ],
+  "zones": [
+    "ZONE_NORTH_WEST",
+    "ZONE_NORTH_EAST",
+    "ZONE_CENTRAL",
+    "ZONE_COMMERCIAL"
+  ]
+}
